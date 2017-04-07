@@ -1,0 +1,32 @@
+{
+    "mutuplexApp": {
+        "assure" : {
+            "home": {
+                "title": "Assures",
+                "createLabel": "Create a new Assure",
+                "createOrEditLabel": "Create or edit a Assure",
+                "search": "Search for Assure"
+            },
+            "created": "A new Assure is created with identifier {{ param }}",
+            "updated": "A Assure is updated with identifier {{ param }}",
+            "deleted": "A Assure is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Assure {{ id }}?"
+            },
+            "detail": {
+                "title": "Assure"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "sexe": "Sexe",
+            "date_naissance": "Date Naissance",
+            "lieu": "Lieu",
+            "email": "Email",
+            "telF": "Tel F",
+            "telP": "Tel P",
+            "matricule": "Matricule",
+            "assure_police": "Police",
+            "assure_groupe": "Groupe"
+        }
+    }
+}

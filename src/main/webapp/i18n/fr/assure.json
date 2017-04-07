@@ -1,0 +1,33 @@
+{
+    "mutuplexApp": {
+        "assure" : {
+            "home": {
+                "title": "Assurés",
+                "createLabel": "Créer un nouvel Assuré",
+                "createOrEditLabel": "Créer ou éditer un Assuré",
+                "search": "Recherche pour Assure",
+                "titleliste": "Liste des Assurés"
+            },
+            "created": "Un nouveau Assure a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Assuré avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Assuré avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Assure {{ id }} ?"
+            },
+            "detail": {
+                "title": "Assurés"
+            },
+            "nom": "Nom",
+            "prenom": "Prénom",
+            "sexe": "Sexe",
+            "date_naissance": "Date Naissance",
+            "lieu": "Lieu de naissance",
+            "email": "Email",
+            "telF": "Tel Fixe",
+            "telP": "Tel Portable",
+            "matricule": "Matricule",
+            "assure_police": "Police",
+            "assure_groupe": "Groupe"
+        }
+    }
+}

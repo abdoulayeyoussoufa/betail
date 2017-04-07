@@ -1,0 +1,471 @@
+
+<div>
+    <h2><span data-translate="mutuplexApp.police.detail.title">Police</span> {{vm.police.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <div class="form-horizontal jh-entity-details">
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.raison">Raison</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.raison}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.adresse">Adresse</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.adresse}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.tel">Tel</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.tel}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.email">Email</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.email}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.interloc">Interloc</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.interloc}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.dateDebut">Date Debut</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.dateDebut | date:'mediumDate'}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.dateFin">Date Fin</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.dateFin | date:'mediumDate'}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.tiers">Tiers</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.tiers}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.tpx">Tpx</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.tpx}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.activite">Activite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.activite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.formule_soins">Formule Soins</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.formule_soins}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.territoire">Territoire</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.territoire}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.plafond">Plafond</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.plafond}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.complement">Complement</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.complement}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_taux">Consultation Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_frais">Consultation Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_limite">Consultation Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_jour">Consultation Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_an">Consultation An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.consultation_deux_an">Consultation Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.consultation_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_taux">Pharmacie Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_frais">Pharmacie Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_limite">Pharmacie Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_jour">Pharmacie Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_an">Pharmacie An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.pharmacie_deux_an">Pharmacie Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.pharmacie_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_taux">Analyse Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_frais">Analyse Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_limite">Analyse Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_jour">Analyse Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_an">Analyse An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.analyse_deux_an">Analyse Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.analyse_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_taux">Acte Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_frais">Acte Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_limite">Acte Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_jour">Acte Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_an">Acte An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.acte_deux_an">Acte Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.acte_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_taux">Principal Chambre Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_frais">Principal Chambre Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_limite">Principal Chambre Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_jour">Principal Chambre Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_an">Principal Chambre An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_chambre_deux_an">Principal Chambre Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_chambre_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_frais_taux">Principal Frais Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_frais_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_frais_limite">Principal Frais Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_frais_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_frais_jour">Principal Frais Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_frais_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_frais_an">Principal Frais An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_frais_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.principal_frais_deux_an">Principal Frais Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.principal_frais_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_taux">Prive Chambre Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_frais">Prive Chambre Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_limite">Prive Chambre Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_jour">Prive Chambre Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_an">Prive Chambre An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_chambre_deux_an">Prive Chambre Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_chambre_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_frais_taux">Prive Frais Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_frais_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_frais_limite">Prive Frais Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_frais_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_frais_jour">Prive Frais Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_frais_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_frais_an">Prive Frais An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_frais_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.prive_frais_deux_an">Prive Frais Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.prive_frais_deux_an}}</span>
+        </div >
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_taux">Public Chambre Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_taux}}</span>
+        </div >
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_frais">Public Chambre Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_limite">Public Chambre Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_jour">Public Chambre Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_an">Public Chambre An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_chambre_deux_an">Public Chambre Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_chambre_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_taux">Public Frais Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_frais">Public Frais Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_limite">Public Frais Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_jour">Public Frais Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_an">Public Frais An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.public_frais_deux_an">Public Frais Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.public_frais_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_taux">Soins Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_frais">Soins Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_limite">Soins Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_jour">Soins Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_an">Soins An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.soins_deux_an">Soins Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.soins_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_taux">Verre Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_frais">Verre Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_limite">Verre Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_jour">Verre Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_an">Verre An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.verre_deux_an">Verre Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.verre_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_taux">Monture Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_frais">Monture Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_limite">Monture Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_jour">Monture Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_an">Monture An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.monture_deux_an">Monture Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.monture_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_taux">Accouchement Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_frais">Accouchement Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_limite">Accouchement Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_jour">Accouchement Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_an">Accouchement An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.accouchement_deux_an">Accouchement Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.accouchement_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_taux">Education Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_frais">Education Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_limite">Education Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_jour">Education Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_an">Education An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.education_deux_an">Education Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.education_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_taux">Sejour Taux</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_taux}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_frais">Sejour Frais</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_frais}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_limite">Sejour Limite</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_limite}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_jour">Sejour Jour</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_jour}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_an">Sejour An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.sejour_deux_an">Sejour Deux An</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.sejour_deux_an}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.nbCollab">Nb Collab</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.nbCollab}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.nbConjoint">Nb Conjoint</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.nbConjoint}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.nbEnfantP">Nb Enfant P</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.nbEnfantP}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.nbEnfantG">Nb Enfant G</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.nbEnfantG}}</span>
+        </div>
+        <div class="col-lg-2"><span data-translate="mutuplexApp.police.fin">Fin</span></div>
+        <div class="col-lg-2">
+            <span>{{vm.police.fin}}</span>
+        </div>
+    </div>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="police-detail.edit({id:vm.police.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

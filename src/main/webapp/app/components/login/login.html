@@ -1,0 +1,59 @@
+
+<div class="middle-box text-center loginscreen animated fadeInDown">
+	<div>
+		<div>
+			<h1 class="logo-name">
+				<!-- <img src="content/img/favicon.png" /> -->
+				Mutuplex
+			</h1>
+		</div>
+		<h3>Bienvenue dans Medicis-Mutuplex</h3>
+		<!-- <p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
+                Continually expanded and constantly improved Inspinia Admin Them (IN+)
+            </p> -->
+		<p>Veuillez vous authentifier</p>
+		<div>
+			<div class="alert alert-danger" ng-show="authenticationError"
+				data-translate="login.messages.error.authentication">
+				<strong>Failed to sign in!</strong> Please check your credentials
+				and try again.
+			</div>
+		</div>
+		<div>
+			<form class="m-t" role="form" ng-submit="login()">
+				<div class="form-group">
+					<!-- <label for="username" data-translate="global.form.username">Login</label> -->
+					<input type="text" class="form-control" id="username"
+						placeholder="{{'global.form.username.placeholder' | translate}}"
+						ng-model="username">
+				</div>
+				<div class="form-group">
+					<!-- <label for="password" data-translate="login.form.password">Password</label> -->
+					<input type="password" class="form-control" id="password"
+						placeholder="{{'login.form.password.placeholder' | translate}}"
+						ng-model="password">
+				</div>
+				<!-- <div class="form-group">
+                    <label for="rememberMe">
+                        <input type="checkbox" id="rememberMe" ng-model="rememberMe" checked>
+                        <span data-translate="login.form.rememberme">Remember me</span>
+                    </label>
+                </div> -->
+				<button type="submit" class="btn btn-primary block full-width m-b"
+					data-translate="login.form.button">Sign in</button>
+			</form>
+			<p></p>
+			<a href="#"><small data-translate="login.password.forgot">Did
+					you forget your password?</small></a>
+			<!--  <div class="alert alert-warning">
+                <a class="alert-link" href="" ng-click="requestResetPassword()" data-translate="login.password.forgot">Did you forget your password?</a>
+            </div> -->
+			<!-- <div class="alert alert-warning" data-translate="global.messages.info.register" translate-compile>
+                You don't have an account yet? <a class="alert-link" href="" ng-click="register()">Register a new account</a>
+            </div> -->
+			<p class="m-t">
+				<small>Mutuplex est une inovation de SEYSOO &copy; 2017</small>
+			</p>
+		</div>
+	</div>
+</div>

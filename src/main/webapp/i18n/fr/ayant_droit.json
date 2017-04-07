@@ -1,0 +1,27 @@
+{
+    "mutuplexApp": {
+        "ayant_droit" : {
+            "home": {
+                "title": "Les Ayant droits",
+                "createLabel": "Créer un nouvel Ayant Droit",
+                "createOrEditLabel": "Créer ou éditer un Ayant Droit",
+                "search": "Rechercher un Ayant Droit"
+            },
+            "created": "Un nouveau Ayant Droit a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Ayant Droit avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Ayant Droit avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ayant Droit {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ayant Droit"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "sexe": "Sexe",
+            "lien_parent": "Lien de Parenté",
+            "date_naissance": "Date Naissance",
+            "ayant_assure": "Nom de l'assureur"
+        }
+    }
+}

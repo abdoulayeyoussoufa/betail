@@ -1,0 +1,483 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "raison",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "adresse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tel",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "pattern"
+            ],
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldName": "interloc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tiers",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tpx",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "activite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "formule_soins",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "territoire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plafond",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "complement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "consultation_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "consultation_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "consultation_limite",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "consultation_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "consultation_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "consultation_deux_an",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "pharmacie_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pharmacie_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pharmacie_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pharmacie_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pharmacie_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pharmacie_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "analyse_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "analyse_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "analyse_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "analyse_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "analyse_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "analyse_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "acte_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "acte_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "acte_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "acte_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "acte_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "acte_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_chambre_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_chambre_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "principal_chambre_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "principal_chambre_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_chambre_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_chambre_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_frais_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_frais_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "principal_frais_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_frais_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "principal_frais_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_chambre_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_chambre_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prive_chambre_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prive_chambre_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_chambre_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_chambre_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_frais_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_frais_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prive_frais_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_frais_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "prive_frais_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_chambre_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_chambre_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "public_chambre_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "public_chambre_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_chambre_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_chambre_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_frais_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_frais_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "public_frais_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "public_frais_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_frais_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "public_frais_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "soins_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "soins_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "soins_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "soins_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "soins_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "soins_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "verre_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "verre_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "verre_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "verre_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "verre_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "verre_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "monture_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "monture_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "monture_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "monture_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "monture_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "monture_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "accouchement_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "accouchement_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accouchement_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accouchement_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "accouchement_an",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accouchement_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "education_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "education_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "education_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "education_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "education_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "education_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sejour_taux",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sejour_frais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sejour_limite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sejour_jour",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sejour_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sejour_deux_an",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "nbCollab",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nbConjoint",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nbEnfantP",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nbEnfantG",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fin",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170314213733",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "police",
+    "pagination": "pager"
+}

@@ -1,0 +1,34 @@
+<div class="center">
+	    <h2><span data-translate="mutuplexApp.assure.detail.title">Assure</span> {{vm.assure.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <div class="row">
+    	<div class="col-lg-12 jh-entity-details">
+    		<div class="col-lg-3"><b data-translate="mutuplexApp.assure.nom">Nom</b></div>
+    		<div class="col-lg-3"><span>{{vm.assure.nom}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.prenom">Prenom</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.prenom}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.sexe">Sexe</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.sexe}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.date_naissance">Date Naissance</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.date_naissance}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.lieu">Lieu</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.lieu}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.email">Email</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.email}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.telF">Tel F</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.telF}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.telP">Tel P</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.telP}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.matricule">Matricule</b></div>
+			<div class="col-lg-3"><span>{{vm.assure.matricule}}</span></div>
+			<div class="col-lg-3"><b data-translate="mutuplexApp.assure.assure_police">Assure Police</b></div>
+			<div class="col-lg-3"><a ui-sref="police-detail({id:vm.assure.assure_police.id})">{{vm.assure.assure_police.raison}}</a></div>
+    		<div class="col-lg-3"><b data-translate="mutuplexApp.assure.assure_groupe">Assure Groupe</b></div>
+    		<div class="col-lg-3"><a ui-sref="groupe-detail({id:vm.assure.assure_groupe.id})">{{vm.assure.assure_groupe.intitule}}</a></div>
+    	</div>
+    	<button type="submit" ui-sref="{{ vm.previousState }}" class="btn btn-info">
+	        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    	</button>
+    </div>
+</div>
