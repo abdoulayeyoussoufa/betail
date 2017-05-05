@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .controller('ResetFinishController', ResetFinishController);
 
     ResetFinishController.$inject = ['$stateParams', '$timeout', 'Auth', 'LoginService'];

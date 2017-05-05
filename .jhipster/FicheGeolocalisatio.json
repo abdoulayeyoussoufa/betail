@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "latitude",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "precision",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "altitude",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20170428122327",
+    "entityTableName": "fiche_geolocalisatio",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

@@ -1,0 +1,28 @@
+{
+    "volBetailApp": {
+        "eleveur" : {
+            "home": {
+                "title": "Eleveurs",
+                "createLabel": "Create a new Eleveur",
+                "createOrEditLabel": "Create or edit a Eleveur"
+            },
+            "created": "A new Eleveur is created with identifier {{ param }}",
+            "updated": "A Eleveur is updated with identifier {{ param }}",
+            "deleted": "A Eleveur is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Eleveur {{ id }}?"
+            },
+            "detail": {
+                "title": "Eleveur"
+            },
+            "numero": "Numero",
+            "prenom": "Prenom",
+            "nom": "Nom",
+            "langue": "Langue",
+            "sex": "Sex",
+            "email": "Email",
+            "numeroCNI": "Numero CNI",
+            "telephone": "Telephone"
+        }
+    }
+}

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .controller('PoliceDeleteController',PoliceDeleteController);
 
     PoliceDeleteController.$inject = ['$uibModalInstance', 'entity', 'Police'];
@@ -13,7 +13,7 @@
         vm.police = entity;
         vm.clear = clear;
         vm.confirmDelete = confirmDelete;
-        
+
         function clear () {
             $uibModalInstance.dismiss('cancel');
         }

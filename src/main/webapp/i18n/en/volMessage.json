@@ -1,0 +1,20 @@
+{
+    "volBetailApp": {
+        "volMessage" : {
+            "home": {
+                "title": "Vol Messages",
+                "createLabel": "Create a new Vol Message",
+                "createOrEditLabel": "Create or edit a Vol Message"
+            },
+            "created": "A new Vol Message is created with identifier {{ param }}",
+            "updated": "A Vol Message is updated with identifier {{ param }}",
+            "deleted": "A Vol Message is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Vol Message {{ id }}?"
+            },
+            "detail": {
+                "title": "Vol Message"
+            }
+        }
+    }
+}

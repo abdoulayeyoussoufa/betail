@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "ferme" : {
+            "home": {
+                "title": "Fermes",
+                "createLabel": "Create a new Ferme",
+                "createOrEditLabel": "Create or edit a Ferme"
+            },
+            "created": "A new Ferme is created with identifier {{ param }}",
+            "updated": "A Ferme is updated with identifier {{ param }}",
+            "deleted": "A Ferme is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Ferme {{ id }}?"
+            },
+            "detail": {
+                "title": "Ferme"
+            },
+            "nom": "Nom",
+            "superficie": "Superficie"
+        }
+    }
+}

@@ -505,7 +505,7 @@ function passwordMeter() {
  * Pass all functions into module
  */
 angular
-    .module('mutuplexApp')
+    .module('volBetailApp')
     .directive('pageTitle', pageTitle)
     .directive('vectorMap', vectorMap)
     .directive('sparkline', sparkline)

@@ -1,0 +1,11 @@
+{
+    "volBetailApp": {
+        "SituationEnum" : {
+            "null": "",
+            "NORMAL": "NORMAL",
+            "VOL": "VOL",
+            "MALADE": "MALADE",
+            "DORMI": "DORMI"
+        }
+    }
+}

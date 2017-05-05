@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .filter('words', words);
 
     function words() {

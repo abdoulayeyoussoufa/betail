@@ -1,0 +1,58 @@
+<div>
+    <h2 data-translate="volBetailApp.ferme.home.title">Fermes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="ferme.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="volBetailApp.ferme.home.createLabel">
+                        Create new Ferme
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="volBetailApp.ferme.nom">Nom</span></th>
+                    <th><span data-translate="volBetailApp.ferme.superficie">Superficie</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ferme in vm.fermes track by ferme.id">
+                    <td><a ui-sref="ferme-detail({id:ferme.id})">{{ferme.id}}</a></td>
+                    <td>{{ferme.nom}}</td>
+                    <td>{{ferme.superficie}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="ferme-detail({id:ferme.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ferme.edit({id:ferme.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ferme.delete({id:ferme.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

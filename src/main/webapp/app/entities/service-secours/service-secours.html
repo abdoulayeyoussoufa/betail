@@ -1,0 +1,58 @@
+<div>
+    <h2 data-translate="volBetailApp.serviceSecours.home.title">Service Secours</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="service-secours.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="volBetailApp.serviceSecours.home.createLabel">
+                        Create new Service Secours
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="volBetailApp.serviceSecours.nom">Nom</span></th>
+                    <th><span data-translate="volBetailApp.serviceSecours.siege">Siege</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="serviceSecours in vm.serviceSecours track by serviceSecours.id">
+                    <td><a ui-sref="service-secours-detail({id:serviceSecours.id})">{{serviceSecours.id}}</a></td>
+                    <td>{{serviceSecours.nom}}</td>
+                    <td>{{serviceSecours.siege}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="service-secours-detail({id:serviceSecours.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="service-secours.edit({id:serviceSecours.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="service-secours.delete({id:serviceSecours.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

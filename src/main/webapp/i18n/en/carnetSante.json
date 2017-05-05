@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "carnetSante" : {
+            "home": {
+                "title": "Carnet Santes",
+                "createLabel": "Create a new Carnet Sante",
+                "createOrEditLabel": "Create or edit a Carnet Sante"
+            },
+            "created": "A new Carnet Sante is created with identifier {{ param }}",
+            "updated": "A Carnet Sante is updated with identifier {{ param }}",
+            "deleted": "A Carnet Sante is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Carnet Sante {{ id }}?"
+            },
+            "detail": {
+                "title": "Carnet Sante"
+            },
+            "datVaccination": "Dat Vaccination",
+            "nom": "Nom"
+        }
+    }
+}

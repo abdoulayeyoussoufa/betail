@@ -1,0 +1,9 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "personne",
+    "pagination": "pagination"
+}

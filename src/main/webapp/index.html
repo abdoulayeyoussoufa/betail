@@ -3,29 +3,41 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projet multuplex</title>
-    <meta name="description" content="">
+    <title>Projet vol de Betail</title>
+    <meta name="description" content=" vol de Betail">
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css content/css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css">
+<!--     <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css"> -->
     <!-- endinject -->
     <!-- endbuild -->
     <!-- build:css content/css/main.css -->
   <!--   <link rel="stylesheet" href="content/css/main.css"> -->
     <link href="content/css/bootstrap.min.css" rel="stylesheet">
     <link href="content/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link href="content/css/plugins/chosen/chosen.css" rel="stylesheet">
     <!-- Font awesome -->
     <link href="content/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="content/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="content/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
     <!-- Main Inspinia CSS files -->
     <link href="content/css/animate.css" rel="stylesheet">
     <link id="loadBefore" href="content/css/style.css" rel="stylesheet">
     <!-- endbuild -->
+    <!-- Manuellement -->
+    <link href="content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="content/css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="content/css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="content/css/plugins/colorpicker/colorpicker.css" rel="stylesheet">
+    <link href="content/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="content/css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="content/css/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="content/css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
 </head>
-<body ng-app="mutuplexApp" ng-strict-di>
+<body ng-app="volBetailApp" ng-strict-di>
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -107,31 +119,151 @@
     <script src="app/layouts/error/error.state.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
+    <script src="app/entities/vol-message/vol-message-dialog.controller.js"></script>
+    <script src="app/entities/vol-message/vol-message-detail.controller.js"></script>
+    <script src="app/entities/vol-message/vol-message-delete-dialog.controller.js"></script>
+    <script src="app/entities/vol-message/vol-message.state.js"></script>
+    <script src="app/entities/vol-message/vol-message.service.js"></script>
+    <script src="app/entities/vol-message/vol-message.controller.js"></script>
+    <script src="app/entities/veterinaire/veterinaire-dialog.controller.js"></script>
+    <script src="app/entities/veterinaire/veterinaire-detail.controller.js"></script>
+    <script src="app/entities/veterinaire/veterinaire-delete-dialog.controller.js"></script>
+    <script src="app/entities/veterinaire/veterinaire.state.js"></script>
+    <script src="app/entities/veterinaire/veterinaire.service.js"></script>
+    <script src="app/entities/veterinaire/veterinaire.controller.js"></script>
+    <script src="app/entities/troupeau/troupeau-dialog.controller.js"></script>
+    <script src="app/entities/troupeau/troupeau-detail.controller.js"></script>
+    <script src="app/entities/troupeau/troupeau-delete-dialog.controller.js"></script>
+    <script src="app/entities/troupeau/troupeau.state.js"></script>
+    <script src="app/entities/troupeau/troupeau.service.js"></script>
+    <script src="app/entities/troupeau/troupeau.controller.js"></script>
+    <script src="app/entities/service-secours/service-secours-dialog.controller.js"></script>
+    <script src="app/entities/service-secours/service-secours-detail.controller.js"></script>
+    <script src="app/entities/service-secours/service-secours-delete-dialog.controller.js"></script>
+    <script src="app/entities/service-secours/service-secours.state.js"></script>
+    <script src="app/entities/service-secours/service-secours.service.js"></script>
+    <script src="app/entities/service-secours/service-secours.controller.js"></script>
+    <script src="app/entities/race/race-dialog.controller.js"></script>
+    <script src="app/entities/race/race-detail.controller.js"></script>
+    <script src="app/entities/race/race-delete-dialog.controller.js"></script>
+    <script src="app/entities/race/race.state.js"></script>
+    <script src="app/entities/race/race.service.js"></script>
+    <script src="app/entities/race/race.controller.js"></script>
     <script src="app/entities/police/police-dialog.controller.js"></script>
     <script src="app/entities/police/police-detail.controller.js"></script>
     <script src="app/entities/police/police-delete-dialog.controller.js"></script>
     <script src="app/entities/police/police.state.js"></script>
     <script src="app/entities/police/police.service.js"></script>
     <script src="app/entities/police/police.controller.js"></script>
-    <script src="app/entities/groupe/groupe-dialog.controller.js"></script>
-    <script src="app/entities/groupe/groupe-detail.controller.js"></script>
-    <script src="app/entities/groupe/groupe-delete-dialog.controller.js"></script>
-    <script src="app/entities/groupe/groupe.state.js"></script>
-    <script src="app/entities/groupe/groupe.service.js"></script>
-    <script src="app/entities/groupe/groupe.controller.js"></script>
+    <script src="app/entities/personne/personne-dialog.controller.js"></script>
+    <script src="app/entities/personne/personne-detail.controller.js"></script>
+    <script src="app/entities/personne/personne-delete-dialog.controller.js"></script>
+    <script src="app/entities/personne/personne.state.js"></script>
+    <script src="app/entities/personne/personne.service.js"></script>
+    <script src="app/entities/personne/personne.controller.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire-dialog.controller.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire-detail.controller.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire-delete-dialog.controller.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire.state.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire.service.js"></script>
+    <script src="app/entities/partenaire-bancaire/partenaire-bancaire.controller.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic-dialog.controller.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic-detail.controller.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic-delete-dialog.controller.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic.state.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic.service.js"></script>
+    <script src="app/entities/message-epidemic/message-epidemic.controller.js"></script>
+    <script src="app/entities/maladie/maladie-dialog.controller.js"></script>
+    <script src="app/entities/maladie/maladie-detail.controller.js"></script>
+    <script src="app/entities/maladie/maladie-delete-dialog.controller.js"></script>
+    <script src="app/entities/maladie/maladie.state.js"></script>
+    <script src="app/entities/maladie/maladie.service.js"></script>
+    <script src="app/entities/maladie/maladie.controller.js"></script>
+    <script src="app/entities/localite/localite-dialog.controller.js"></script>
+    <script src="app/entities/localite/localite-detail.controller.js"></script>
+    <script src="app/entities/localite/localite-delete-dialog.controller.js"></script>
+    <script src="app/entities/localite/localite.state.js"></script>
+    <script src="app/entities/localite/localite.service.js"></script>
+    <script src="app/entities/localite/localite.controller.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite-dialog.controller.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite-detail.controller.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite-delete-dialog.controller.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite.state.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite.service.js"></script>
+    <script src="app/entities/fiche-tracabilite/fiche-tracabilite.controller.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio-dialog.controller.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio-detail.controller.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio-delete-dialog.controller.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio.state.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio.service.js"></script>
+    <script src="app/entities/fiche-geolocalisatio/fiche-geolocalisatio.controller.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal-dialog.controller.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal-detail.controller.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal-delete-dialog.controller.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal.state.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal.service.js"></script>
+    <script src="app/entities/fiche-animal/fiche-animal.controller.js"></script>
+    <script src="app/entities/ferme/ferme-dialog.controller.js"></script>
+    <script src="app/entities/ferme/ferme-detail.controller.js"></script>
+    <script src="app/entities/ferme/ferme-delete-dialog.controller.js"></script>
+    <script src="app/entities/ferme/ferme.state.js"></script>
+    <script src="app/entities/ferme/ferme.service.js"></script>
+    <script src="app/entities/ferme/ferme.controller.js"></script>
+    <script src="app/entities/facture/facture-dialog.controller.js"></script>
+    <script src="app/entities/facture/facture-detail.controller.js"></script>
+    <script src="app/entities/facture/facture-delete-dialog.controller.js"></script>
+    <script src="app/entities/facture/facture.state.js"></script>
+    <script src="app/entities/facture/facture.service.js"></script>
+    <script src="app/entities/facture/facture.controller.js"></script>
+    <script src="app/entities/epidemie/epidemie-dialog.controller.js"></script>
+    <script src="app/entities/epidemie/epidemie-detail.controller.js"></script>
+    <script src="app/entities/epidemie/epidemie-delete-dialog.controller.js"></script>
+    <script src="app/entities/epidemie/epidemie.state.js"></script>
+    <script src="app/entities/epidemie/epidemie.service.js"></script>
+    <script src="app/entities/epidemie/epidemie.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit-dialog.controller.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit-detail.controller.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit-delete-dialog.controller.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit.state.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit.service.js"></script>
-    <script src="app/entities/ayant-droit/ayant-droit.controller.js"></script>
-    <script src="app/entities/assure/assure-dialog.controller.js"></script>
-    <script src="app/entities/assure/assure-detail.controller.js"></script>
-    <script src="app/entities/assure/assure-delete-dialog.controller.js"></script>
-    <script src="app/entities/assure/assure.state.js"></script>
-    <script src="app/entities/assure/assure.service.js"></script>
-    <script src="app/entities/assure/assure.controller.js"></script>
+    <script src="app/entities/eleveur/eleveur-dialog.controller.js"></script>
+    <script src="app/entities/eleveur/eleveur-detail.controller.js"></script>
+    <script src="app/entities/eleveur/eleveur-delete-dialog.controller.js"></script>
+    <script src="app/entities/eleveur/eleveur.state.js"></script>
+    <script src="app/entities/eleveur/eleveur.service.js"></script>
+    <script src="app/entities/eleveur/eleveur.controller.js"></script>
+    <script src="app/entities/commande/commande-dialog.controller.js"></script>
+    <script src="app/entities/commande/commande-detail.controller.js"></script>
+    <script src="app/entities/commande/commande-delete-dialog.controller.js"></script>
+    <script src="app/entities/commande/commande.state.js"></script>
+    <script src="app/entities/commande/commande.service.js"></script>
+    <script src="app/entities/commande/commande.controller.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante-dialog.controller.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante-detail.controller.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante-delete-dialog.controller.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante.state.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante.service.js"></script>
+    <script src="app/entities/carnet-sante/carnet-sante.controller.js"></script>
+    <script src="app/entities/avis-perte/avis-perte-dialog.controller.js"></script>
+    <script src="app/entities/avis-perte/avis-perte-detail.controller.js"></script>
+    <script src="app/entities/avis-perte/avis-perte-delete-dialog.controller.js"></script>
+    <script src="app/entities/avis-perte/avis-perte.state.js"></script>
+    <script src="app/entities/avis-perte/avis-perte.service.js"></script>
+    <script src="app/entities/avis-perte/avis-perte.controller.js"></script>
+    <script src="app/entities/animal/animal-dialog.controller.js"></script>
+    <script src="app/entities/animal/animal-detail.controller.js"></script>
+    <script src="app/entities/animal/animal-delete-dialog.controller.js"></script>
+    <script src="app/entities/animal/animal.state.js"></script>
+    <script src="app/entities/animal/animal.service.js"></script>
+    <script src="app/entities/animal/animal.controller.js"></script>
+    <script src="app/entities/adresse/adresse-dialog.controller.js"></script>
+    <script src="app/entities/adresse/adresse-detail.controller.js"></script>
+    <script src="app/entities/adresse/adresse-delete-dialog.controller.js"></script>
+    <script src="app/entities/adresse/adresse.state.js"></script>
+    <script src="app/entities/adresse/adresse.service.js"></script>
+    <script src="app/entities/adresse/adresse.controller.js"></script>
+    <script src="app/entities/accessoire/accessoire-dialog.controller.js"></script>
+    <script src="app/entities/accessoire/accessoire-detail.controller.js"></script>
+    <script src="app/entities/accessoire/accessoire-delete-dialog.controller.js"></script>
+    <script src="app/entities/accessoire/accessoire.state.js"></script>
+    <script src="app/entities/accessoire/accessoire.service.js"></script>
+    <script src="app/entities/accessoire/accessoire.controller.js"></script>
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
     <script src="app/components/util/sort-by.directive.js"></script>
@@ -179,6 +311,9 @@
     <script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
     <script src="app/admin/user-management/user-management.state.js"></script>
     <script src="app/admin/user-management/user-management.controller.js"></script>
+    <script src="app/admin/tracker/tracker.state.js"></script>
+    <script src="app/admin/tracker/tracker.service.js"></script>
+    <script src="app/admin/tracker/tracker.controller.js"></script>
     <script src="app/admin/metrics/metrics.state.js"></script>
     <script src="app/admin/metrics/metrics.service.js"></script>
     <script src="app/admin/metrics/metrics.modal.controller.js"></script>
@@ -216,6 +351,34 @@
     <script src="app/account/account.state.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
+    
+    <!-- Manuellement -->
+    <script src="content/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    
+    <script src="content/js/jquery-3.1.1.min.js"></script>
+<!--     <script src="content/js/jquery-2.1.1.min.js"></script> -->
+    <script src="content/js/moment.min.js"></script>
+    <script src="content/js/bootstrap.min.js"></script>
+    
+   
+    <link href="content/css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+    
+        <!-- Custom and plugin javascript -->
+    <script src="content/js/inspinia.js"></script>
+    <script src="content/js/plugins/pace/pace.min.js"></script>
+    <script src="content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="content/js/plugins/chosen/chosen.jquery.js"></script>
+     <script src="content/js/plugins/chosen/chosen.js"></script>
+    <!-- MENU -->
+    <script src="content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <!-- Select2 -->
+    <script src="content/js/plugins/select2/select2.full.min.js"></script>
+    <script src="content/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="content/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    
+    
+    
 
 </body>
 </html>
+

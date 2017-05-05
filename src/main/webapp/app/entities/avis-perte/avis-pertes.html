@@ -1,0 +1,58 @@
+<div>
+    <h2 data-translate="volBetailApp.avisPerte.home.title">Avis Pertes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="avis-perte.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="volBetailApp.avisPerte.home.createLabel">
+                        Create new Avis Perte
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="volBetailApp.avisPerte.animalId">Animal Id</span></th>
+                    <th><span data-translate="volBetailApp.avisPerte.nomAnimalper">Nom Animalper</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="avisPerte in vm.avisPertes track by avisPerte.id">
+                    <td><a ui-sref="avis-perte-detail({id:avisPerte.id})">{{avisPerte.id}}</a></td>
+                    <td>{{avisPerte.animalId}}</td>
+                    <td>{{avisPerte.nomAnimalper}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="avis-perte-detail({id:avisPerte.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="avis-perte.edit({id:avisPerte.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="avis-perte.delete({id:avisPerte.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

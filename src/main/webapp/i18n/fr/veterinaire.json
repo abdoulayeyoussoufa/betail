@@ -1,0 +1,25 @@
+{
+    "volBetailApp": {
+        "veterinaire" : {
+            "home": {
+                "title": "Veterinaires",
+                "createLabel": "Créer un nouveau Veterinaire",
+                "createOrEditLabel": "Créer ou éditer un Veterinaire"
+            },
+            "created": "Un nouveau Veterinaire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Veterinaire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Veterinaire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Veterinaire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Veterinaire"
+            },
+            "prenom": "Prenom",
+            "nom": "Nom",
+            "email": "Email",
+            "telephone": "Telephone",
+            "numeroCNI": "Numero CNI"
+        }
+    }
+}

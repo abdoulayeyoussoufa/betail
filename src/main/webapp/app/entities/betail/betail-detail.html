@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.betail.detail.title">Betail</span> {{vm.betail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.betail.type">Type</span></dt>
+        <dd>
+            <span>{{vm.betail.type}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.sexe">Sexe</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.SexeEnum.' + vm.betail.sexe}}">{{vm.betail.sexe}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.race">Race</span></dt>
+        <dd>
+            <span>{{vm.betail.race}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.couleurRobe">Couleur Robe</span></dt>
+        <dd>
+            <span>{{vm.betail.couleurRobe}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.vitesse">Vitesse</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.VitesseEnum.' + vm.betail.vitesse}}">{{vm.betail.vitesse}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.enclos">Enclos</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.EnclosEnum.' + vm.betail.enclos}}">{{vm.betail.enclos}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.situation">Situation</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.SituationEnum.' + vm.betail.situation}}">{{vm.betail.situation}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.betail.poids">Poids</span></dt>
+        <dd>
+            <span>{{vm.betail.poids}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="betail-detail.edit({id:vm.betail.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

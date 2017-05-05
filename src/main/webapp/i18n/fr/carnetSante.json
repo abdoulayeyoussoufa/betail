@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "carnetSante" : {
+            "home": {
+                "title": "CarnetSantes",
+                "createLabel": "Créer un nouveau Carnet Sante",
+                "createOrEditLabel": "Créer ou éditer un Carnet Sante"
+            },
+            "created": "Un nouveau Carnet Sante a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Carnet Sante avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Carnet Sante avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Carnet Sante {{ id }} ?"
+            },
+            "detail": {
+                "title": "Carnet Sante"
+            },
+            "datVaccination": "Dat Vaccination",
+            "nom": "Nom"
+        }
+    }
+}

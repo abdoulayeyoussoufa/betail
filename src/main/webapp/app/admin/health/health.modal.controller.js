@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('mutuplexApp')
+    angular.module('volBetailApp')
         .controller('HealthModalController', HealthModalController);
 
     HealthModalController.$inject = ['$uibModalInstance', 'currentHealth', 'baseName', 'subSystemName'];

@@ -1,0 +1,12 @@
+{
+    "volBetailApp": {
+        "Language" : {
+            "null": "",
+            "WOLOF": "WOLOF",
+            "PEULH": "PEULH",
+            "FRENCH": "FRENCH",
+            "ENGLISH": "ENGLISH",
+            "SPANISH": "SPANISH"
+        }
+    }
+}

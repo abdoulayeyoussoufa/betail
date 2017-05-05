@@ -1,0 +1,125 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEleveurLabel" data-translate="volBetailApp.eleveur.home.createOrEditLabel">Create or edit a Eleveur</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.eleveur.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.eleveur.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.numero" for="field_numero">Numero</label>
+            <input type="number" class="form-control" name="numero" id="field_numero"
+                    ng-model="vm.eleveur.numero"
+                    required/>
+            <div ng-show="editForm.numero.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numero.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.numero.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.prenom" for="field_prenom">Prenom</label>
+            <input type="text" class="form-control" name="prenom" id="field_prenom"
+                    ng-model="vm.eleveur.prenom"
+                    required ng-maxlength="30"/>
+            <div ng-show="editForm.prenom.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prenom.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.prenom.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="30">
+                    This field cannot be longer than 30 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="vm.eleveur.nom"
+                    required ng-maxlength="30"/>
+            <div ng-show="editForm.nom.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nom.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nom.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="30">
+                    This field cannot be longer than 30 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.langue" for="field_langue">Langue</label>
+            <select class="form-control" name="langue" ng-model="vm.eleveur.langue" id="field_langue">
+                <option value="WOLOF" data-translate="volBetailApp.Language.WOLOF">WOLOF</option>
+                <option value="PEULH" data-translate="volBetailApp.Language.PEULH">PEULH</option>
+                <option value="FRENCH" data-translate="volBetailApp.Language.FRENCH">FRENCH</option>
+                <option value="ENGLISH" data-translate="volBetailApp.Language.ENGLISH">ENGLISH</option>
+                <option value="SPANISH" data-translate="volBetailApp.Language.SPANISH">SPANISH</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.sex" for="field_sex">Sex</label>
+            <select class="form-control" name="sex" ng-model="vm.eleveur.sex" id="field_sex">
+                <option value="M" data-translate="volBetailApp.Sexe.M">M</option>
+                <option value="F" data-translate="volBetailApp.Sexe.F">F</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.eleveur.email"
+                    ng-pattern="/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/"/>
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.email.$error.pattern" data-translate="entity.validation.pattern" translate-value-pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+                    This field should follow pattern "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.numeroCNI" for="field_numeroCNI">Numero CNI</label>
+            <input type="text" class="form-control" name="numeroCNI" id="field_numeroCNI"
+                    ng-model="vm.eleveur.numeroCNI"
+                    required ng-pattern="/^[1-2](\w){3}(\d){4}(\d){5}$/"/>
+            <div ng-show="editForm.numeroCNI.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numeroCNI.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.numeroCNI.$error.pattern" data-translate="entity.validation.pattern" translate-value-pattern="^[1-2](\w){3}(\d){4}(\d){5}$">
+                    This field should follow pattern "^[1-2](\w){3}(\d){4}(\d){5}$".
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.eleveur.telephone" for="field_telephone">Telephone</label>
+            <input type="text" class="form-control" name="telephone" id="field_telephone"
+                    ng-model="vm.eleveur.telephone"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

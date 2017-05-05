@@ -1,0 +1,25 @@
+{
+    "volBetailApp": {
+        "veterinaire" : {
+            "home": {
+                "title": "Veterinaires",
+                "createLabel": "Create a new Veterinaire",
+                "createOrEditLabel": "Create or edit a Veterinaire"
+            },
+            "created": "A new Veterinaire is created with identifier {{ param }}",
+            "updated": "A Veterinaire is updated with identifier {{ param }}",
+            "deleted": "A Veterinaire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Veterinaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Veterinaire"
+            },
+            "prenom": "Prenom",
+            "nom": "Nom",
+            "email": "Email",
+            "telephone": "Telephone",
+            "numeroCNI": "Numero CNI"
+        }
+    }
+}

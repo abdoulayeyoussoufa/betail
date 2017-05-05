@@ -1,0 +1,81 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBetailLabel" data-translate="volBetailApp.betail.home.createOrEditLabel">Create or edit a Betail</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.betail.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.betail.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.type" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                    ng-model="vm.betail.type"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.sexe" for="field_sexe">Sexe</label>
+            <select class="form-control" name="sexe" ng-model="vm.betail.sexe" id="field_sexe">
+                <option value="M" data-translate="volBetailApp.SexeEnum.M">M</option>
+                <option value="F" data-translate="volBetailApp.SexeEnum.F">F</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.race" for="field_race">Race</label>
+            <input type="text" class="form-control" name="race" id="field_race"
+                    ng-model="vm.betail.race"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.couleurRobe" for="field_couleurRobe">Couleur Robe</label>
+            <input type="text" class="form-control" name="couleurRobe" id="field_couleurRobe"
+                    ng-model="vm.betail.couleurRobe"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.vitesse" for="field_vitesse">Vitesse</label>
+            <select class="form-control" name="vitesse" ng-model="vm.betail.vitesse" id="field_vitesse">
+                <option value="NORMALE" data-translate="volBetailApp.VitesseEnum.NORMALE">NORMALE</option>
+                <option value="BASSE" data-translate="volBetailApp.VitesseEnum.BASSE">BASSE</option>
+                <option value="ELEVEE" data-translate="volBetailApp.VitesseEnum.ELEVEE">ELEVEE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.enclos" for="field_enclos">Enclos</label>
+            <select class="form-control" name="enclos" ng-model="vm.betail.enclos" id="field_enclos">
+                <option value="PRES" data-translate="volBetailApp.EnclosEnum.PRES">PRES</option>
+                <option value="LOIN" data-translate="volBetailApp.EnclosEnum.LOIN">LOIN</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.situation" for="field_situation">Situation</label>
+            <select class="form-control" name="situation" ng-model="vm.betail.situation" id="field_situation">
+                <option value="NORMAL" data-translate="volBetailApp.SituationEnum.NORMAL">NORMAL</option>
+                <option value="VOL" data-translate="volBetailApp.SituationEnum.VOL">VOL</option>
+                <option value="MALADE" data-translate="volBetailApp.SituationEnum.MALADE">MALADE</option>
+                <option value="DORMI" data-translate="volBetailApp.SituationEnum.DORMI">DORMI</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="volBetailApp.betail.poids" for="field_poids">Poids</label>
+            <input type="text" class="form-control" name="poids" id="field_poids"
+                    ng-model="vm.betail.poids"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

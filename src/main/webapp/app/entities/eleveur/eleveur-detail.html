@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.eleveur.detail.title">Eleveur</span> {{vm.eleveur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.eleveur.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.eleveur.numero}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.eleveur.prenom}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.eleveur.nom}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.langue">Langue</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.Language.' + vm.eleveur.langue}}">{{vm.eleveur.langue}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.sex">Sex</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.Sexe.' + vm.eleveur.sex}}">{{vm.eleveur.sex}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.email">Email</span></dt>
+        <dd>
+            <span>{{vm.eleveur.email}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.numeroCNI">Numero CNI</span></dt>
+        <dd>
+            <span>{{vm.eleveur.numeroCNI}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.eleveur.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{vm.eleveur.telephone}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="eleveur-detail.edit({id:vm.eleveur.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

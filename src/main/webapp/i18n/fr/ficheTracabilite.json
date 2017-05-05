@@ -1,0 +1,24 @@
+{
+    "volBetailApp": {
+        "ficheTracabilite" : {
+            "home": {
+                "title": "FicheTracabilites",
+                "createLabel": "Créer un nouveau Fiche Tracabilite",
+                "createOrEditLabel": "Créer ou éditer un Fiche Tracabilite"
+            },
+            "created": "Un nouveau Fiche Tracabilite a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fiche Tracabilite avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fiche Tracabilite avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fiche Tracabilite {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fiche Tracabilite"
+            },
+            "proprietaireActu": "Proprietaire Actu",
+            "dateObt": "Date Obt",
+            "lieuActuel": "Lieu Actuel",
+            "dernierProp": "Dernier Prop"
+        }
+    }
+}

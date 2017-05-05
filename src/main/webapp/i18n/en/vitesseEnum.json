@@ -1,0 +1,10 @@
+{
+    "volBetailApp": {
+        "VitesseEnum" : {
+            "null": "",
+            "NORMALE": "NORMALE",
+            "BASSE": "BASSE",
+            "ELEVEE": "ELEVEE"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-angular.module('mutuplexApp')
+angular.module('volBetailApp')
 .service('DatatableUtils',DatatableUtils);
 function DatatableUtils () {
 	return this.buildParams = function(aoData, customerParams) {

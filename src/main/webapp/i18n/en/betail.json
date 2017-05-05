@@ -1,0 +1,28 @@
+{
+    "volBetailApp": {
+        "betail" : {
+            "home": {
+                "title": "Betails",
+                "createLabel": "Create a new Betail",
+                "createOrEditLabel": "Create or edit a Betail"
+            },
+            "created": "A new Betail is created with identifier {{ param }}",
+            "updated": "A Betail is updated with identifier {{ param }}",
+            "deleted": "A Betail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Betail {{ id }}?"
+            },
+            "detail": {
+                "title": "Betail"
+            },
+            "type": "Type",
+            "sexe": "Sexe",
+            "race": "Race",
+            "couleurRobe": "Couleur Robe",
+            "vitesse": "Vitesse",
+            "enclos": "Enclos",
+            "situation": "Situation",
+            "poids": "Poids"
+        }
+    }
+}

@@ -2,6 +2,9 @@
 # Spring Boot configuration.
 #
 # This configuration is used for unit/integration tests.
+#
+# More information on profiles: https://jhipster.github.io/profiles/
+# More information on configuration properties: https://jhipster.github.io/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -13,31 +16,20 @@
 
 spring:
     application:
-        name: mutuplex
+        name: volBetail
     jackson:
         serialization.write_dates_as_timestamps: false
-    datasource:
-        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:mutuplex;DB_CLOSE_DELAY=-1
-        name:
-        username:
-        password:
-    jpa:
-        database-platform: sn.seysoo.multiplex.domain.util.FixedH2Dialect
-        database: H2
-        open-in-view: false
-        show-sql: true
-        hibernate:
-            ddl-auto: none
-            naming:
-                strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
-        properties:
-            hibernate.cache.use_second_level_cache: false
-            hibernate.cache.use_query_cache: false
-            hibernate.generate_statistics: true
-            hibernate.hbm2ddl.auto: validate
+    cache:
+        type: none
+    data:
+        mongodb:
+            host: localhost
+            port: 27117
+            database: volBetail
     mail:
         host: localhost
+    messages:
+        basename: i18n/messages
     mvc:
         favicon:
             enabled: false
@@ -57,26 +49,29 @@ server:
 
 # ===================================================================
 # JHipster specific properties
+#
+# Full reference is available at: https://jhipster.github.io/common-application-properties/
 # ===================================================================
 
 jhipster:
     async:
-        corePoolSize: 2
-        maxPoolSize: 50
-        queueCapacity: 10000
+        core-pool-size: 1
+        max-pool-size: 50
+        queue-capacity: 10000
     security:
-        rememberMe:
+        remember-me:
             # security key (this key should be unique for your application, and kept secret)
-            key: e7e874fa0c1543a06450e89ada8c7846f3ea004c
+            key: 14bcef87ecca6d005f6a4889d8acd9f26233a180
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-    swagger:
-        title: mutuplex API
-        description: mutuplex API documentation
-        version: 0.0.1
-        termsOfServiceUrl:
-        contactName:
-        contactUrl:
-        contactEmail:
-        license:
-        licenseUrl:
+
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://jhipster.github.io/common-application-properties/
+# ===================================================================
+
+application:

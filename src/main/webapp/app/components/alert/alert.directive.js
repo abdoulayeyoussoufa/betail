@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .component('jhiAlert', jhiAlert);
 
     jhiAlertController.$inject = ['$scope', 'AlertService'];

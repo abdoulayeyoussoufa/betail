@@ -1,0 +1,85 @@
+ 
+    <jhi-alert></jhi-alert>
+ <!--    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="betail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span>
+                        ajouter un animal
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+    <div class="row">
+     
+ 
+  
+    <div  class="col-6" ui-sref="#" >
+    <span class="glyphicon glyphicon-hdd"> Donn&eacute;es d'exemples du B&eacute;tail </span>
+     </div>
+      
+   
+</div>
+    <br/>
+    <div class="ibox-content">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover dataTables-example dataTable">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <!-- <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th> -->
+                    <th jh-sort-by="type"><span data-translate="volBetailApp.betail.type">Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sexe"><span data-translate="volBetailApp.betail.sexe">Sexe</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="race"><span data-translate="volBetailApp.betail.race">Race</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="couleurRobe"><span data-translate="volBetailApp.betail.couleurRobe">Couleur Robe</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vitesse"><span data-translate="volBetailApp.betail.vitesse">Vitesse</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="enclos"><span data-translate="volBetailApp.betail.enclos">Enclos</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="situation"><span data-translate="volBetailApp.betail.situation">Situation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="poids"><span data-translate="volBetailApp.betail.poids">Poids</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="betail in vm.betails track by betail.id">
+                    <!-- <td><a ui-sref="betail-detail({id:betail.id})">{{betail.id}}</a></td> -->
+                    <td>{{betail.type}}</td>
+                    <td data-translate="{{'volBetailApp.SexeEnum.' + betail.sexe}}">{{betail.sexe}}</td>
+                    <td>{{betail.race}}</td>
+                    <td>{{betail.couleurRobe}}</td>
+                    <td data-translate="{{'volBetailApp.VitesseEnum.' + betail.vitesse}}">{{betail.vitesse}}</td>
+                    <td data-translate="{{'volBetailApp.EnclosEnum.' + betail.enclos}}">{{betail.enclos}}</td>
+                    <td data-translate="{{'volBetailApp.SituationEnum.' + betail.situation}}">{{betail.situation}}</td>
+                    <td>{{betail.poids}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="betail-detail({id:betail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="betail.edit({id:betail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="betail.delete({id:betail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="dataTables_paginate paging_simple_numbers">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
+ 

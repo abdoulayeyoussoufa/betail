@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.ficheTracabilite.detail.title">Fiche Tracabilite</span> {{vm.ficheTracabilite.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.ficheTracabilite.proprietaireActu">Proprietaire Actu</span></dt>
+        <dd>
+            <span>{{vm.ficheTracabilite.proprietaireActu}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.ficheTracabilite.dateObt">Date Obt</span></dt>
+        <dd>
+            <span>{{vm.ficheTracabilite.dateObt | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.ficheTracabilite.lieuActuel">Lieu Actuel</span></dt>
+        <dd>
+            <span>{{vm.ficheTracabilite.lieuActuel}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.ficheTracabilite.dernierProp">Dernier Prop</span></dt>
+        <dd>
+            <span>{{vm.ficheTracabilite.dernierProp}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fiche-tracabilite-detail.edit({id:vm.ficheTracabilite.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

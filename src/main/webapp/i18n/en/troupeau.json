@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "troupeau" : {
+            "home": {
+                "title": "Troupeaus",
+                "createLabel": "Create a new Troupeau",
+                "createOrEditLabel": "Create or edit a Troupeau"
+            },
+            "created": "A new Troupeau is created with identifier {{ param }}",
+            "updated": "A Troupeau is updated with identifier {{ param }}",
+            "deleted": "A Troupeau is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Troupeau {{ id }}?"
+            },
+            "detail": {
+                "title": "Troupeau"
+            },
+            "categorie": "Categorie",
+            "effectif": "Effectif"
+        }
+    }
+}

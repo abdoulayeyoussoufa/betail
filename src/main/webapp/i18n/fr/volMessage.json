@@ -1,0 +1,20 @@
+{
+    "volBetailApp": {
+        "volMessage" : {
+            "home": {
+                "title": "VolMessages",
+                "createLabel": "Créer un nouveau Vol Message",
+                "createOrEditLabel": "Créer ou éditer un Vol Message"
+            },
+            "created": "Un nouveau Vol Message a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Vol Message avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Vol Message avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Vol Message {{ id }} ?"
+            },
+            "detail": {
+                "title": "Vol Message"
+            }
+        }
+    }
+}

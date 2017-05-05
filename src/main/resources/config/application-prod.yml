@@ -2,6 +2,9 @@
 # Spring Boot configuration for the "prod" profile.
 #
 # This configuration overrides the application.yml file.
+#
+# More information on profiles: https://jhipster.github.io/profiles/
+# More information on configuration properties: https://jhipster.github.io/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -10,28 +13,16 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-
 spring:
     devtools:
         restart:
             enabled: false
         livereload:
             enabled: false
-    datasource:
-        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/mutuplex
-        name:
-        username: mutuplex
-        password:
-    jpa:
-        database-platform: sn.seysoo.multiplex.domain.util.FixedPostgreSQL82Dialect
-        database: POSTGRESQL
-        show-sql: false
-        properties:
-            hibernate.cache.use_second_level_cache: true
-            hibernate.cache.use_query_cache: false
-            hibernate.generate_statistics: false
-            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017
+            database: volBetail
     mail:
         host: localhost
         port: 25
@@ -40,9 +31,23 @@ spring:
     thymeleaf:
         cache: true
 
-liquibase:
-    contexts: prod
-
+# ===================================================================
+# To enable SSL, generate a certificate using:
+# keytool -genkey -alias volBetail -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+#
+# You can also use Let's Encrypt:
+# https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
+#
+# Then, modify the server.ssl properties so your "server" configuration looks like:
+#
+# server:
+#    port: 443
+#    ssl:
+#        key-store: keystore.p12
+#        key-store-password: <your-password>
+#        keyStoreType: PKCS12
+#        keyAlias: volBetail
+# ===================================================================
 server:
     port: 8080
     compression:
@@ -52,38 +57,49 @@ server:
 
 # ===================================================================
 # JHipster specific properties
+#
+# Full reference is available at: https://jhipster.github.io/common-application-properties/
 # ===================================================================
 
 jhipster:
     http:
+        version: V_1_1 # To use HTTP/2 you will need SSL support (see above the "server.ssl" configuration)
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
-    cache: # Hibernate 2nd level cache, used by CacheConfiguration
-        ehcache:
-            maxBytesLocalHeap: 256M
     security:
-        rememberMe:
+        remember-me:
             # security key (this key should be unique for your application, and kept secret)
-            key: e7e874fa0c1543a06450e89ada8c7846f3ea004c
+            key: 14bcef87ecca6d005f6a4889d8acd9f26233a180
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: mutuplex@localhost
+        from: volBetail@localhost
+        base-url: http://my-server-url-to-change # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-        spark:
-            enabled: false
-            host: localhost
-            port: 9999
         graphite:
             enabled: false
             host: localhost
             port: 2003
-            prefix: mutuplex
+            prefix: volBetail
+        prometheus:
+            enabled: false
+            endpoint: /prometheusMetrics
         logs: # Reports Dropwizard metrics in the logs
             enabled: false
-            reportFrequency: 60 # in seconds
+            report-frequency: 60 # in seconds
     logging:
         logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
             enabled: false
             host: localhost
             port: 5000
-            queueSize: 512
+            queue-size: 512
+
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://jhipster.github.io/common-application-properties/
+# ===================================================================
+
+application:

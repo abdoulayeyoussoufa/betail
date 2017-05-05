@@ -2,17 +2,16 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .controller('PoliceDialogController', PoliceDialogController);
 
-    PoliceDialogController.$inject = ['$timeout', '$scope', '$stateParams', 'entity', 'Police'];
+    PoliceDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Police'];
 
-    function PoliceDialogController ($timeout, $scope, $stateParams, entity, Police) {
+    function PoliceDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Police) {
         var vm = this;
+
         vm.police = entity;
         vm.clear = clear;
-        vm.datePickerOpenStatus = {};
-        vm.openCalendar = openCalendar;
         vm.save = save;
 
         $timeout(function (){
@@ -20,7 +19,7 @@
         });
 
         function clear () {
-            //$uibModalInstance.dismiss('cancel');
+            $uibModalInstance.dismiss('cancel');
         }
 
         function save () {
@@ -33,8 +32,8 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('mutuplexApp:policeUpdate', result);
-            //$uibModalInstance.close(result);
+            $scope.$emit('volBetailApp:policeUpdate', result);
+            $uibModalInstance.close(result);
             vm.isSaving = false;
         }
 
@@ -42,11 +41,6 @@
             vm.isSaving = false;
         }
 
-        vm.datePickerOpenStatus.dateDebut = false;
-        vm.datePickerOpenStatus.dateFin = false;
 
-        function openCalendar (date) {
-            vm.datePickerOpenStatus[date] = true;
-        }
     }
 })();

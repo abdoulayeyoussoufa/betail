@@ -2,7 +2,7 @@
 
 describe('Controller Tests', function () {
 
-    beforeEach(module('mutuplexApp'));
+    beforeEach(module('volBetailApp'));
 
     describe('LoginController', function () {
         var $scope, authService;

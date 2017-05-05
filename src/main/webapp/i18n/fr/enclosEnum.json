@@ -1,0 +1,9 @@
+{
+    "volBetailApp": {
+        "EnclosEnum" : {
+            "null": "",
+            "PRES": "PRES",
+            "LOIN": "LOIN"
+        }
+    }
+}

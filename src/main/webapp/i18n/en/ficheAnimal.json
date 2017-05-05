@@ -1,0 +1,23 @@
+{
+    "volBetailApp": {
+        "ficheAnimal" : {
+            "home": {
+                "title": "Fiche Animals",
+                "createLabel": "Create a new Fiche Animal",
+                "createOrEditLabel": "Create or edit a Fiche Animal"
+            },
+            "created": "A new Fiche Animal is created with identifier {{ param }}",
+            "updated": "A Fiche Animal is updated with identifier {{ param }}",
+            "deleted": "A Fiche Animal is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fiche Animal {{ id }}?"
+            },
+            "detail": {
+                "title": "Fiche Animal"
+            },
+            "dateDec": "Date Dec",
+            "dateNais": "Date Nais",
+            "lieuNais": "Lieu Nais"
+        }
+    }
+}

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .factory('notificationInterceptor', notificationInterceptor);
 
     notificationInterceptor.$inject = ['$q', 'AlertService'];
@@ -15,9 +15,9 @@
         return service;
 
         function response (response) {
-            var alertKey = response.headers('X-mutuplexApp-alert');
+            var alertKey = response.headers('X-volBetailApp-alert');
             if (angular.isString(alertKey)) {
-                AlertService.success(alertKey, { param : response.headers('X-mutuplexApp-params')});
+                AlertService.success(alertKey, { param : response.headers('X-volBetailApp-params')});
             }
             return response;
         }

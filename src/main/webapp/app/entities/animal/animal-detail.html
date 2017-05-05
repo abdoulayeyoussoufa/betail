@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.animal.detail.title">Animal</span> {{vm.animal.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.animal.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.animal.numero}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.animal.couleurRobe">Couleur Robe</span></dt>
+        <dd>
+            <span>{{vm.animal.couleurRobe}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.animal.sexe">Sexe</span></dt>
+        <dd>
+            <span data-translate="{{'volBetailApp.Sexe.' + vm.animal.sexe}}">{{vm.animal.sexe}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.animal.taille">Taille</span></dt>
+        <dd>
+            <span>{{vm.animal.taille}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.animal.poids">Poids</span></dt>
+        <dd>
+            <span>{{vm.animal.poids}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.animal.age">Age</span></dt>
+        <dd>
+            <span>{{vm.animal.age}}</span>
+        </dd>
+          <dt><span data-translate="volBetailApp.animal.maladies">Maladies</span></dt>
+        <dd>
+            <span>{{vm.animal.maladies.nom}}</span>
+        </dd>
+        
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="animal-detail.edit({id:vm.animal.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

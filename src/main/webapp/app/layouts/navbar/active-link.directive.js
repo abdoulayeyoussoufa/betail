@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .directive('activeLink', activeLink)
         .directive('sideNavigation', sideNavigation)
         .directive('minimalizaSidebar', minimalizaSidebar)

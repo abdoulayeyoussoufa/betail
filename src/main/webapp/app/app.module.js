@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp', [
+        .module('volBetailApp', [
             'ngStorage', 
             'tmh.dynamicLocale',
             'pascalprecht.translate', 

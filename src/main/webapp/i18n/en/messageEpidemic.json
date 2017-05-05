@@ -1,0 +1,24 @@
+{
+    "volBetailApp": {
+        "messageEpidemic" : {
+            "home": {
+                "title": "Message Epidemics",
+                "createLabel": "Create a new Message Epidemic",
+                "createOrEditLabel": "Create or edit a Message Epidemic"
+            },
+            "created": "A new Message Epidemic is created with identifier {{ param }}",
+            "updated": "A Message Epidemic is updated with identifier {{ param }}",
+            "deleted": "A Message Epidemic is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Message Epidemic {{ id }}?"
+            },
+            "detail": {
+                "title": "Message Epidemic"
+            },
+            "nom": "Nom",
+            "date": "Date",
+            "lieu": "Lieu",
+            "description": "Description"
+        }
+    }
+}

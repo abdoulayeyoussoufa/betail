@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .directive('jhSort', jhSort);
     SortController.$inject = ['$scope', '$element','$timeout'];
 

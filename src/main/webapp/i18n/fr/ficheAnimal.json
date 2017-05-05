@@ -1,0 +1,23 @@
+{
+    "volBetailApp": {
+        "ficheAnimal" : {
+            "home": {
+                "title": "FicheAnimals",
+                "createLabel": "Créer un nouveau Fiche Animal",
+                "createOrEditLabel": "Créer ou éditer un Fiche Animal"
+            },
+            "created": "Un nouveau Fiche Animal a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fiche Animal avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fiche Animal avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fiche Animal {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fiche Animal"
+            },
+            "dateDec": "Date Dec",
+            "dateNais": "Date Nais",
+            "lieuNais": "Lieu Nais"
+        }
+    }
+}

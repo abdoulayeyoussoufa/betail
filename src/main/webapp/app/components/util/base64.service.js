@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .factory('Base64', Base64);
 
     function Base64 () {

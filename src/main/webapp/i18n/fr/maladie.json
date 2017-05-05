@@ -1,0 +1,23 @@
+{
+    "volBetailApp": {
+        "maladie" : {
+            "home": {
+                "title": "Maladies",
+                "createLabel": "Créer un nouveau Maladie",
+                "createOrEditLabel": "Créer ou éditer un Maladie"
+            },
+            "created": "Un nouveau Maladie a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Maladie avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Maladie avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Maladie {{ id }} ?"
+            },
+            "detail": {
+                "title": "Maladie"
+            },
+            "nom": "Nom",
+            "type": "Type",
+            "description": "Description"
+        }
+    }
+}

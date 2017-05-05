@@ -1,0 +1,62 @@
+<div>
+    <h2 data-translate="volBetailApp.ficheTracabilite.home.title">Fiche Tracabilites</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="fiche-tracabilite.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="volBetailApp.ficheTracabilite.home.createLabel">
+                        Create new Fiche Tracabilite
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="volBetailApp.ficheTracabilite.proprietaireActu">Proprietaire Actu</span></th>
+                    <th><span data-translate="volBetailApp.ficheTracabilite.dateObt">Date Obt</span></th>
+                    <th><span data-translate="volBetailApp.ficheTracabilite.lieuActuel">Lieu Actuel</span></th>
+                    <th><span data-translate="volBetailApp.ficheTracabilite.dernierProp">Dernier Prop</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ficheTracabilite in vm.ficheTracabilites track by ficheTracabilite.id">
+                    <td><a ui-sref="fiche-tracabilite-detail({id:ficheTracabilite.id})">{{ficheTracabilite.id}}</a></td>
+                    <td>{{ficheTracabilite.proprietaireActu}}</td>
+                        <td>{{ficheTracabilite.dateObt | date:'mediumDate'}}</td>
+                    <td>{{ficheTracabilite.lieuActuel}}</td>
+                    <td>{{ficheTracabilite.dernierProp}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="fiche-tracabilite-detail({id:ficheTracabilite.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fiche-tracabilite.edit({id:ficheTracabilite.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fiche-tracabilite.delete({id:ficheTracabilite.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

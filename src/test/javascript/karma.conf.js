@@ -26,8 +26,8 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/jquery/dist/jquery.js',
             'src/main/webapp/bower_components/messageformat/messageformat.js',
             'src/main/webapp/bower_components/json3/lib/json3.js',
-            'src/main/webapp/bower_components/datatables.net/js/jquery.dataTables.js',
-            'src/main/webapp/bower_components/datatables/media/js/jquery.dataTables.js',
+            'src/main/webapp/bower_components/sockjs-client/dist/sockjs.js',
+            'src/main/webapp/bower_components/stomp-websocket/lib/stomp.min.js',
             'src/main/webapp/bower_components/angular/angular.js',
             'src/main/webapp/bower_components/angular-aria/angular-aria.js',
             'src/main/webapp/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
@@ -35,6 +35,7 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/angular-cookies/angular-cookies.js',
             'src/main/webapp/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
             'src/main/webapp/bower_components/ngstorage/ngStorage.js',
+            'src/main/webapp/bower_components/angular-loading-bar/build/loading-bar.js',
             'src/main/webapp/bower_components/angular-resource/angular-resource.js',
             'src/main/webapp/bower_components/angular-sanitize/angular-sanitize.js',
             'src/main/webapp/bower_components/angular-translate/angular-translate.js',
@@ -45,18 +46,6 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js',
             'src/main/webapp/bower_components/ng-file-upload/ng-file-upload.js',
             'src/main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/angular-datatables.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/colreorder/angular-datatables.colreorder.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/colvis/angular-datatables.colvis.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js',
-            'src/main/webapp/bower_components/angular-datatables/dist/plugins/select/angular-datatables.select.js',
             'src/main/webapp/bower_components/angular-mocks/angular-mocks.js',
             // endbower
             'src/main/webapp/app/app.module.js',
@@ -65,12 +54,12 @@ module.exports = function (config) {
             'src/main/webapp/app/**/*.+(js|html)',
             'src/test/javascript/spec/helpers/module.js',
             'src/test/javascript/spec/helpers/httpBackend.js',
-            'src/test/javascript/**/!(karma.conf).js'
+            'src/test/javascript/**/!(karma.conf|protractor.conf).js'
         ],
 
 
         // list of files / patterns to exclude
-        exclude: [],
+        exclude: ['src/test/javascript/e2e/**'],
 
         preprocessors: {
             './**/*.js': sourcePreprocessors

@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "couleurRobe",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 15
+        },
+        {
+            "fieldName": "sexe",
+            "fieldType": "Sexe",
+            "fieldValues": "M,F"
+        },
+        {
+            "fieldName": "taille",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "poids",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170410164229",
+    "entityTableName": "animal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

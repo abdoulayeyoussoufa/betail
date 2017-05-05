@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.ficheAnimal.detail.title">Fiche Animal</span> {{vm.ficheAnimal.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.ficheAnimal.dateDec">Date Dec</span></dt>
+        <dd>
+            <span>{{vm.ficheAnimal.dateDec | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.ficheAnimal.dateNais">Date Nais</span></dt>
+        <dd>
+            <span>{{vm.ficheAnimal.dateNais | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.ficheAnimal.lieuNais">Lieu Nais</span></dt>
+        <dd>
+            <span>{{vm.ficheAnimal.lieuNais}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fiche-animal-detail.edit({id:vm.ficheAnimal.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

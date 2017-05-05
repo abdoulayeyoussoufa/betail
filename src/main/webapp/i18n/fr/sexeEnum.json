@@ -1,0 +1,9 @@
+{
+    "volBetailApp": {
+        "SexeEnum" : {
+            "null": "",
+            "M": "M",
+            "F": "F"
+        }
+    }
+}

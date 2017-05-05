@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "avisPerte" : {
+            "home": {
+                "title": "Avis Pertes",
+                "createLabel": "Create a new Avis Perte",
+                "createOrEditLabel": "Create or edit a Avis Perte"
+            },
+            "created": "A new Avis Perte is created with identifier {{ param }}",
+            "updated": "A Avis Perte is updated with identifier {{ param }}",
+            "deleted": "A Avis Perte is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Avis Perte {{ id }}?"
+            },
+            "detail": {
+                "title": "Avis Perte"
+            },
+            "animalId": "Animal Id",
+            "nomAnimalper": "Nom Animalper"
+        }
+    }
+}

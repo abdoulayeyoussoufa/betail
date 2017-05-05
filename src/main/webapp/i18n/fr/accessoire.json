@@ -1,0 +1,24 @@
+{
+    "volBetailApp": {
+        "accessoire" : {
+            "home": {
+                "title": "Accessoires",
+                "createLabel": "Créer un nouveau Accessoire",
+                "createOrEditLabel": "Créer ou éditer un Accessoire"
+            },
+            "created": "Un nouveau Accessoire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Accessoire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Accessoire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Accessoire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Accessoire"
+            },
+            "code": "Code",
+            "type": "Type",
+            "couleur": "Couleur",
+            "prix": "Prix"
+        }
+    }
+}

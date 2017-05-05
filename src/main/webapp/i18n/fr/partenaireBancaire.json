@@ -1,0 +1,21 @@
+{
+    "volBetailApp": {
+        "partenaireBancaire" : {
+            "home": {
+                "title": "PartenaireBancaires",
+                "createLabel": "Créer un nouveau Partenaire Bancaire",
+                "createOrEditLabel": "Créer ou éditer un Partenaire Bancaire"
+            },
+            "created": "Un nouveau Partenaire Bancaire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Partenaire Bancaire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Partenaire Bancaire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Partenaire Bancaire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Partenaire Bancaire"
+            },
+            "nomReseau": "Nom Reseau"
+        }
+    }
+}

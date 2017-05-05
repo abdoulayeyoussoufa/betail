@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .controller('LoginController', LoginController);
 
     LoginController.$inject = ['$scope','$rootScope', '$state', '$timeout', 'Auth'];

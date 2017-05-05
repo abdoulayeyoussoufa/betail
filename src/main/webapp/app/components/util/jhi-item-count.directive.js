@@ -15,6 +15,6 @@
     };
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .component('jhiItemCount', jhiItemCount);
 })();

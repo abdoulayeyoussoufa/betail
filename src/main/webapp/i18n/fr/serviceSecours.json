@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "serviceSecours" : {
+            "home": {
+                "title": "ServiceSecours",
+                "createLabel": "Créer un nouveau Service Secours",
+                "createOrEditLabel": "Créer ou éditer un Service Secours"
+            },
+            "created": "Un nouveau Service Secours a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Service Secours avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Service Secours avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Service Secours {{ id }} ?"
+            },
+            "detail": {
+                "title": "Service Secours"
+            },
+            "nom": "Nom",
+            "siege": "Siege"
+        }
+    }
+}

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .factory('DateUtils', DateUtils);
 
     DateUtils.$inject = ['$filter'];

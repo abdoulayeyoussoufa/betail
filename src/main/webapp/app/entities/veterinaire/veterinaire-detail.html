@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="volBetailApp.veterinaire.detail.title">Veterinaire</span> {{vm.veterinaire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="volBetailApp.veterinaire.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.veterinaire.prenom}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.veterinaire.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.veterinaire.nom}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.veterinaire.email">Email</span></dt>
+        <dd>
+            <span>{{vm.veterinaire.email}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.veterinaire.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{vm.veterinaire.telephone}}</span>
+        </dd>
+        <dt><span data-translate="volBetailApp.veterinaire.numeroCNI">Numero CNI</span></dt>
+        <dd>
+            <span>{{vm.veterinaire.numeroCNI}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="veterinaire-detail.edit({id:vm.veterinaire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

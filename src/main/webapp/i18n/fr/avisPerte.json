@@ -1,0 +1,22 @@
+{
+    "volBetailApp": {
+        "avisPerte" : {
+            "home": {
+                "title": "AvisPertes",
+                "createLabel": "Créer un nouveau Avis Perte",
+                "createOrEditLabel": "Créer ou éditer un Avis Perte"
+            },
+            "created": "Un nouveau Avis Perte a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Avis Perte avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Avis Perte avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Avis Perte {{ id }} ?"
+            },
+            "detail": {
+                "title": "Avis Perte"
+            },
+            "animalId": "Animal Id",
+            "nomAnimalper": "Nom Animalper"
+        }
+    }
+}

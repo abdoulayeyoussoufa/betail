@@ -1,12 +1,12 @@
 (function() {
     'use strict';
     angular
-        .module('mutuplexApp')
+        .module('volBetailApp')
         .factory('Police', Police);
 
-    Police.$inject = ['$resource', 'DateUtils'];
+    Police.$inject = ['$resource'];
 
-    function Police ($resource, DateUtils) {
+    function Police ($resource) {
         var resourceUrl =  'api/police/:id';
 
         return $resource(resourceUrl, {}, {
@@ -16,30 +16,11 @@
                 transformResponse: function (data) {
                     if (data) {
                         data = angular.fromJson(data);
-                        data.dateDebut = DateUtils.convertLocalDateFromServer(data.dateDebut);
-                        data.dateFin = DateUtils.convertLocalDateFromServer(data.dateFin);
                     }
                     return data;
                 }
             },
-            'update': {
-                method: 'PUT',
-                transformRequest: function (data) {
-                    var copy = angular.copy(data);
-                    copy.dateDebut = DateUtils.convertLocalDateToServer(copy.dateDebut);
-                    copy.dateFin = DateUtils.convertLocalDateToServer(copy.dateFin);
-                    return angular.toJson(copy);
-                }
-            },
-            'save': {
-                method: 'POST',
-                transformRequest: function (data) {
-                    var copy = angular.copy(data);
-                    copy.dateDebut = DateUtils.convertLocalDateToServer(copy.dateDebut);
-                    copy.dateFin = DateUtils.convertLocalDateToServer(copy.dateFin);
-                    return angular.toJson(copy);
-                }
-            }
+            'update': { method:'PUT' }
         });
     }
 })();

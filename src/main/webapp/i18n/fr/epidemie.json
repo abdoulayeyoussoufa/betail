@@ -1,0 +1,23 @@
+{
+    "volBetailApp": {
+        "epidemie" : {
+            "home": {
+                "title": "Epidemies",
+                "createLabel": "Créer un nouveau Epidemie",
+                "createOrEditLabel": "Créer ou éditer un Epidemie"
+            },
+            "created": "Un nouveau Epidemie a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Epidemie avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Epidemie avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Epidemie {{ id }} ?"
+            },
+            "detail": {
+                "title": "Epidemie"
+            },
+            "nom": "Nom",
+            "date": "Date",
+            "desciption": "Desciption"
+        }
+    }
+}

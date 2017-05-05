@@ -1,0 +1,24 @@
+{
+    "volBetailApp": {
+        "ficheGeolocalisatio" : {
+            "home": {
+                "title": "FicheGeolocalisatios",
+                "createLabel": "Créer un nouveau Fiche Geolocalisatio",
+                "createOrEditLabel": "Créer ou éditer un Fiche Geolocalisatio"
+            },
+            "created": "Un nouveau Fiche Geolocalisatio a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fiche Geolocalisatio avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fiche Geolocalisatio avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fiche Geolocalisatio {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fiche Geolocalisatio"
+            },
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "precision": "Precision",
+            "altitude": "Altitude"
+        }
+    }
+}
