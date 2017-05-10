@@ -16,7 +16,7 @@
     <br/>
     
      <div class="ibox-content">
-        <table datatable="" dt-options="dtOptions"   class="table table-striped table-bordered table-hover dataTables-example dataTable">
+        <table datatable=""  class="table table-striped table-bordered table-hover dataTables-example">
             <thead>
                 <tr>
                
@@ -52,8 +52,11 @@
 <!--                     <td>{{animal.troupeau}}</td> -->
 <!--                     <td>{{animal.positionCourante}}</td> -->
 <!--                     <td>{{animal.positionAvant}}</td> -->
-                    <td class="text-right">
+                    <td class="text-left col-sm-3">
+                    
                         <div class="btn-group flex-btn-group-container">
+                           
+                         
                             <button type="submit"
                            
                                     ui-sref="animal-detail({id:animal.id})"
@@ -67,17 +70,33 @@
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
-<!--                             <button type="submit" -->
+                            <button type="submit"
                                     
-<!--                                     ui-sref="animal.delete({id:animal.id})" -->
-<!--                                     class="btn btn-danger btn-sm"> -->
-<!--                                 <span class="glyphicon glyphicon-remove-circle"></span> -->
-<!--                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span> -->
-<!--                             </button> -->
-                        </div>
+                                    ui-sref="animal.delete({id:animal.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                            
+                           </div>
+                       
+                       
                     </td>
                 </tr>
             </tbody>
         </table>
         </div>
     </div>
+    
+    <script>
+        
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                
+
+            });
+
+       
+
+    </script>

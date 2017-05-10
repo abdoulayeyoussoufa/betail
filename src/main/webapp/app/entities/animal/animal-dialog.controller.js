@@ -5,16 +5,20 @@
         .module('volBetailApp')
         .controller('AnimalDialogController', AnimalDialogController);
 
-    AnimalDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Animal','Maladie'];
+    AnimalDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Animal','Maladie','Veterinaire','CarnetSante','FicheAnimal','Troupeau','FicheGeolocalisatio'];
 
-    function AnimalDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Animal,Maladie) {
+    function AnimalDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Animal, Maladie, Veterinaire, CarnetSante, FicheAnimal, Troupeau,FicheGeolocalisatio) {
         var vm = this;
 
         vm.animal = entity;
         vm.clear = clear;
         vm.save = save;
-        vm.maladie = Maladie.query();
-        vm.nomAnimaux =[];
+        vm.maladies = Maladie.query();
+        vm.carnetSantes = CarnetSante.query();
+        vm.ficheAnimal =  FicheAnimal.query();
+        vm.veterinaires = Veterinaire.query();
+        vm.troupeaux = Troupeau.query();
+        vm.positionsCour = FicheGeolocalisatio.query(); 
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

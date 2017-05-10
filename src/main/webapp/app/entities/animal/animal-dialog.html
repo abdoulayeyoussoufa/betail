@@ -39,13 +39,13 @@
                 </p>
             </div>
         </div>
-<!--         <div class="form-group col-md-4"> -->
-<!--             <label class="control-label" data-translate="volBetailApp.animal.sexe" for="field_sexe">Sexe</label> -->
-<!--             <select class="form-control" name="sexe" ng-model="vm.animal.sexe" id="field_sexe"> -->
-<!--                 <option value="M" data-translate="volBetailApp.Sexe.M">M</option> -->
-<!--                 <option value="F" data-translate="volBetailApp.Sexe.F">F</option> -->
-<!--             </select> -->
-<!--         </div> -->
+        <div class="form-group col-md-4">
+            <label class="control-label" data-translate="volBetailApp.animal.sexe" for="field_sexe">Sexe</label>
+            <select class="form-control" name="sexe" ng-model="vm.animal.sexe" id="field_sexe">
+                <option value="M" data-translate="volBetailApp.Sexe.M">M</option>
+                <option value="F" data-translate="volBetailApp.Sexe.F">F</option>
+            </select>
+        </div>
 
         <div class="form-group col-md-4">
             <label class="control-label" data-translate="volBetailApp.animal.taille" for="field_taille">Taille</label>
@@ -66,46 +66,81 @@
                     />
         </div>
         
-        <div class="switch">
-            
-            <div class="onoffswitch">
-                     <input type="checkbox" name="sexe" ng-model="vm.animal.sexe" id="field_sexe" checked class="onoffswitch-checkbox" id="example1">
-                     <label class="onoffswitch-label" data-translate="volBetailApp.animal.sexe" for="field_sexe" >Sexe
-                         <span class="onoffswitch-inner" value="M"></span>
-                         <span class="onoffswitch-switch" value="F"></span>
-                     </label>
-                 </div>
-          </div>
-<!--             <select class="form-control" name="sexe" ng-model="vm.animal.sexe" id="field_sexe"> -->
-<!--                 <option value="M" data-translate="volBetailApp.Sexe.M">M</option> -->
-<!--                 <option value="F" data-translate="volBetailApp.Sexe.F">F</option> -->
-<!--             </select> -->
+ 
         </div>
-        
-        <div class="switch">
-                                <div class="onoffswitch">
-                                    <input type="checkbox" checked class="onoffswitch-checkbox" id="example1">
-                                    <label class="onoffswitch-label" for="example1">
-                                        <span  value="M"></span>
-                                        <span class="onoffswitch-switch"></span>
-                                    </label>
-                                </div>
-                            </div>
-        
+       
         
        
           
           <div class="form-group">
                 <label class="font-normal" data-translate="volBetailApp.animal.maladies" for="field_maladies">Maladies</label>
                 <div>
-		                <select   class="chosen-select"  tabindex="4"
-				                 ng-options="maladie.nom  for maladie in vm.maladie"
-				                 ng-model="vm.animal.maladies"  >
+                    <p>selected item is : {{selectedItem}}</p>
+                   <select multiple chosen class="chosen-select"  tabindex="4"  ng-model="selectedItem"
+				                 ng-options="maladie.nom  for maladie in vm.maladies" >
 				                 
-				           
-			
-				         
-				                
+				              				                
+		            </select>
+                </div> 
+                
+          
+        </div>
+         <div class="form-group">
+                <label class="font-normal" data-translate="volBetailApp.animal.veterinaires" for="field_veterinaires">Veterinaires</label>
+                <div>
+		                <select  class="chosen-container chosen-container-single chosen-container-active"  tabindex="4"
+				                 ng-options="veterinaire.nom  for veterinaire in vm.veterinaires"
+				                 ng-model="vm.animal.veterinaires.numero"  >
+				              				                
+		              </select>
+                </div> 
+                
+          
+        </div>
+        <div class="form-group">
+                <label class="font-normal" data-translate="volBetailApp.animal.carnetSante" for="field_carnet_sante">Carnet de Sante</label>
+                <div>
+		                <select    tabindex="4"
+				                 ng-options="carnet.numero for carnet in vm.carnetSantes"
+				                 ng-model="vm.animal.veterinaires.numero"  >
+				              				                
+		              </select>
+                </div> 
+                
+          
+        </div>
+        
+         <div class="form-group">
+                <label class="font-normal" data-translate="volBetailApp.animal.ficheAnimal" for="field_fiche_animal">Fiche Animal</label>
+                <div>
+		                <select    tabindex="4"
+				                 ng-options="fiche.numero for fiche in vm.carnetSantes"
+				                 ng-model="vm.animal.ficheAnimal.numero"  >
+				              				                
+		              </select>
+                </div> 
+                
+          
+        </div>
+        <div class="form-group" >
+                <label class="font-normal" data-translate="volBetailApp.animal.troupeau" for="field_troupeau">Troupeau</label>
+                <div>
+		                <select    tabindex="4"
+				                 ng-options="troupeau.categorie for troupeau in vm.troupeaux"
+				                 ng-model="vm.animal.troupeau.categorie"  >
+				              				                
+		              </select>
+                </div> 
+                
+          
+        </div>
+        <div class="form-group">
+                <label class="font-normal" data-translate="volBetailApp.animal.positionCourante" for="field_position_courante">Position Courante</label>
+                <div>
+		                <select    tabindex="4"
+				                 ng-options="position.categorie for position in vm.troupeaux"
+				                 ng-model="vm.animal.position.categorie">
+				              				                
 		              </select>
                 </div> 
                 
@@ -127,10 +162,9 @@
     
 </form>
  <script>
-        
           
-        $('.chosen-select').chosen({width: "100%"});
+	  $('.chosen-select').chosen({width: "65%"});
 
-
-    </script>
+       
+ </script>
   

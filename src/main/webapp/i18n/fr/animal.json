@@ -24,10 +24,10 @@
             "age": "Age",
             "maladies": "Maladies",
             "veterinaires": "Veterinaires",
-            "carnetSante": "CarSan",
-            "ficheAnimal": "FicAni",
+            "carnetSante": "Carnet Sante",
+            "ficheAnimal": "Fiche Animal",
             "troupeau": "Troupeau",
-            "positionCourante": "PosCour",
+            "positionCourante": "Position Courante",
             "positionAvant": "PosAv"
            
         }
