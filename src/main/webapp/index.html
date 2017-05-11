@@ -11,6 +11,7 @@
     <!-- build:css content/css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<!--     <link rel="stylesheet" type="text/css" href="bower_components/chosen/chosen.css" /> -->
 <!--     <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css"> -->
     <!-- endinject -->
     <!-- endbuild -->
@@ -27,11 +28,21 @@
 <link href="content/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css"	rel="stylesheet">
 <link href="content/css/bootstrap.min.css" rel="stylesheet">
 <link href="content/css/plugins/select2/select2.min.css" rel="stylesheet">
+<link href="content/css/plugins/chosen/chosen.css" rel="stylesheet">
 <link href="content/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
 <!-- Font awesome -->
 <link href="content/font-awesome/css/font-awesome.css" rel="stylesheet">
 <link href="content/css/animate.css" rel="stylesheet">
 <link id="loadBefore" href="content/css/style.css" rel="stylesheet">
+<link href="content/css/plugins/cropper/cropper.min.css" rel="stylesheet">
+<link href="content/css/plugins/switchery/switchery.css" rel="stylesheet">
+<link href="content/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="content/css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+<link href="content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="content/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+<link href="content/css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+
+
 <!-- endbuild -->
 </head>
 <body ng-app="volBetailApp" ng-strict-di>
@@ -53,15 +64,23 @@
     </script>-->
 	<!-- MetsiMenu -->
 	<script src="content/js/jquery-3.1.1.min.js"></script>
+	<script src="content/js/bootstrap.min.js"></script>
+	
+	<!-- Custom and plugin javascript -->
+    <script src="content/js/inspinia.js"></script>
+    <script src="content/js/plugins/pace/pace.min.js"></script>
+    <script src="content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 	 
     <!-- build:js app/vendor.js -->
     <!-- bower:js -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- 	<script src="bower_components/jquery/dist/jquery.js"></script> -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/messageformat/messageformat.js"></script>
 	<script src="bower_components/json3/lib/json3.js"></script>
 	<script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
 	<script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
+<!-- 	<script src="bower_components/angular/angular.js"></script> -->
+   <script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	<script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
@@ -91,6 +110,10 @@
 	<script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
 	<script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
 	<script src="bower_components/angular-datatables/dist/plugins/select/angular-datatables.select.js"></script>
+<!-- 	<script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+<!-- 	<script src="bower_components/angular/angular.min.js"></script> -->
+		<script src="bower_components/chosen/dist/angular-chosen.min.js"></script>
+		<script src="bower_components/angular-chosen-localytics/dist/angular-chosen.min.js"></script>
 	<!-- endinject -->
 	<!-- endbuild -->
 
@@ -350,6 +373,59 @@
     <script src="app/account/account.state.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
+    <!-- Chosen -->
+    <script src="content/js/plugins/chosen/dist/angular-chosen.min.js"></script>
+   <script src="content/js/plugins/chosen/chosen.jquery.js"></script>
+   
+   
+   <script src="content/js/plugins/jsKnob/jquery.knob.js"></script>
+   
+    <!-- Input Mask-->
+    <script src="content/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    
+    <!-- Data picker -->
+   <script src="content/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   
+   <!-- NouSlider -->
+   <script src="content/js/plugins/nouslider/jquery.nouislider.min.js"></script>
+   <!-- Switchery -->
+   <script src="content/js/plugins/switchery/switchery.js"></script>
+   <!-- IonRangeSlider -->
+    <script src="content/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <!-- iCheck -->
+    <script src="content/js/plugins/iCheck/icheck.min.js"></script>
+    
+    <!-- MENU -->
+    <script src="content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- Color picker -->
+    <script src="content/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <!-- Clock picker -->
+    <script src="content/js/plugins/clockpicker/clockpicker.js"></script>
+    
+    <!-- Image cropper -->
+    <script src="content/js/plugins/cropper/cropper.min.js"></script>
+    
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="content/js/plugins/fullcalendar/moment.min.js"></script>
+    <!-- Date range picker -->
+    <script src="content/js/plugins/daterangepicker/daterangepicker.js"></script>
+    
+    <!-- Select2 -->
+    <script src="content/js/plugins/select2/select2.full.min.js"></script>
+    <!-- TouchSpin -->
+    <script src="content/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Tags Input -->
+    <script src="content/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    
+    <!-- Dual Listbox -->
+    <script src="content/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
+    
+    
+    
+    
+    
+   
+   
     
 </body>
 </html>

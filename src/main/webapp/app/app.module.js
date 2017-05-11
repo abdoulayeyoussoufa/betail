@@ -20,7 +20,8 @@
             'datatables',
             'datatables.bootstrap',
             'datatables.tabletools',
-            'datatables.buttons'
+            'datatables.buttons',
+            'localytics.directives'
         ])
         .run(run)
         .run(DTDefaultOptionsrun)

@@ -76,11 +76,16 @@
                 <label class="font-normal" data-translate="volBetailApp.animal.maladies" for="field_maladies">Maladies</label>
                 <div>
                     <p>selected item is : {{selectedItem}}</p>
-                   <select multiple chosen class="chosen-select"  tabindex="4"  ng-model="selectedItem"
-				                 ng-options="maladie.nom  for maladie in vm.maladies" >
-				                 
+                   <select multiple chosen ng-model="selectedItem" ng-options="maladie.nom as maladie for maladie in vm.maladies"  style="width: 200px;">
+<!--                        <option value=""></option> -->
+                     </select>
+<!-- 				                  <option ng-repeat= "maladie in vm.maladies"  value={{maladie.nom}}>{{maladie.nom}}</option> -->
+<!-- 				                   <option value="2">two</option> -->
+<!-- 				                    <option value="3">three</option> -->
+				                  
+<!-- 				                 ng-options="maladie.nom  for maladie in vm.maladies" -->
 				              				                
-		            </select>
+		           
                 </div> 
                 
           
@@ -161,10 +166,3 @@
    
     
 </form>
- <script>
-          
-	  $('.chosen-select').chosen({width: "65%"});
-
-       
- </script>
-  
